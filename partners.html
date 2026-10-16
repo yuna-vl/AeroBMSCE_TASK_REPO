@@ -1,150 +1,601 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<title>AeroBMSCE</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AeroBMSCE | Strategic Partnerships, Tiers &amp; Collaboration Ecosystem</title>
+  <meta name="description" content="Collaborate with AeroBMSCE. Discover our partnership tiers, research and development roadmap, collaboration ecosystem, and contact details.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Typography & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP & ScrollTrigger Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<div class="notice">Practice website for the AeroBMSCE web development recruitment task. This is not the official AeroBMSCE website.</div>
+  <!-- Subtle Engineering Grid Background -->
+  <div class="bg-grid-guides" aria-hidden="true"></div>
 
-<div class="top">
-  <div class="wrap">
-    <img src="images/header-logo.png">
-    <div class="nav">
-      <a href="journey.html">Journey</a>
-      <a href="index.html">Home</a>
-      <a href="#">Partners</a>
+
+  <!-- Slim Navigation Bar (Matching Reference Screenshot) -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="AeroBMSCE Home">
+        <img src="images/header-logo.png" alt="AeroBMSCE Emblem" class="brand-emblem" width="32" height="32">
+        <div class="brand-meta">
+          <span class="brand-title">AERO<span class="brand-accent">BMSCE</span></span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        &#9776;
+      </button>
+
+      <nav id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">//Home</a></li>
+          <li><a href="index.html#who" class="nav-link">//Who We Are</a></li>
+          <li><a href="journey.html" class="nav-link">//Journey</a></li>
+          <li><a href="index.html#projects" class="nav-link">//Projects</a></li>
+          <li><a href="partners.html" class="nav-link active" aria-current="page">//Partners</a></li>
+          <li class="nav-contact-mobile"><a href="#contact" class="nav-link">//Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <span class="header-lang-tag" aria-hidden="true">&#9662; EN</span>
+        <a href="#contact" class="btn-header-contact">Contact us</a>
+      </div>
     </div>
-    <div class="clear"></div>
-  </div>
-</div>
+  </header>
 
-<div class="wrap">
+  <main>
+    <!-- Partners Hero -->
+    <section class="section blueprint-bg blueprint-bg-top" aria-labelledby="partners-heading" style="padding-bottom: 3rem;">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">// 01. INDUSTRY &amp; RESEARCH NETWORK</div>
+          <h1 id="partners-heading" class="section-title">Strategic Partnerships &amp; Ecosystem</h1>
+          <p class="section-subtitle">
+            Industry sponsors, simulation software vendors, and research bodies empower AeroBMSCE student engineers to design, build, and deploy world-class aerospace systems.
+          </p>
+        </div>
 
-  <h1 class="sec">WHAT’S NEXT FOR US?</h1>
-  <h2 class="sub">Upcoming Competitions (2026 &amp; 2027) :</h2>
-  <p>We aim to participate in the following prestigious aerospace and UAV competitions, representing our institution at multiple levels:</p>
-  <ul>
-    <li><b>NACDEC 2026</b> – Organized by the Aeronautical Society of India</li>
-    <li><b>ISRO IROC</b> (International Rover Challenge – ISRO Track)</li>
-    <li>NITK Drone Racing Competition 2026</li>
-    <li><b>SAE International Aero Design West</b>, 2027</li>
-    <li><b>SAE Aerothon</b> 2027</li>
-  </ul>
+        <!-- Strategic Status Callout -->
+        <div class="contact-card bracket-box" style="margin-bottom: 2rem;">
+          <div>
+            <div class="section-eyebrow">// INSTITUTIONAL SUBSIDIZATION</div>
+            <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 0.8rem;">World-Stage Ready Flight Systems</h2>
+            <p style="color: var(--text-dark-secondary); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
+              <strong>100% of the Research, Development, and Technical Fabrication</strong> for our current flight systems is subsidized by the R&amp;D department at BMS College of Engineering. We possess flight-proven airframes, telemetry rigs, and autonomous drones ready for premier national and international deployment.
+            </p>
+            <div class="hero-actions" style="margin-bottom: 0;">
+              <a href="#tiers" class="btn btn-black">Explore Partnership Tiers &rarr;</a>
+              <a href="#contact" class="btn btn-bracket">Contact Partnership Lead</a>
+            </div>
+          </div>
+          <div class="contact-cad-preview">
+            <img src="images/cad-plane.png" alt="AeroBMSCE Precision Flight CAD Model" class="contact-cad-img" width="180" height="90" loading="lazy">
+            <div style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: var(--text-dark-primary); margin-bottom: 0.2rem;">TACTICAL AEROSPACE CAD</div>
+            <div style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-dark-secondary);">100% R&amp;D Subsidized by BMSCE</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <h2 class="sub">Research &amp; Development Initiatives: (Ongoing and Upcoming)</h2>
-  <ul>
-    <li><b>Indigenous Flight Controller Development</b> – End-to-end hardware and firmware design</li>
-    <li><b>Electronic Speed Controller (ESC) Development</b> – High-efficiency propulsion electronics</li>
-    <li><b>GPS-Denied Navigation Systems</b> – Vision- and sensor-based autonomous navigation</li>
-    <li><b>Surveillance Aircraft Development</b> – Re-configurable Multi-Mission Fixed-Wing UAV with Convertible Propulsion and Integrated Modular Payload Bay.</li>
-    <li><b>Confidential Defense Project</b> – In collaboration with <b>DRDO</b> (details restricted)</li>
-    <li><b>Morphing Wingtip Mechanisms</b> – Adaptive aerodynamics for performance optimization</li>
-    <li><b>Directional Stability Enhancement Using Deployable Micro-Fins</b> – Active stability control for UAV platforms</li>
-  </ul>
+    <!-- Upcoming Competitions & Enabling Factors -->
+    <section class="section section-alt blueprint-bg blueprint-bg-bottom" aria-labelledby="next-heading">
+      <div class="container">
+        <div class="two-col-grid" style="align-items: flex-start; margin-bottom: 4rem;">
+          <!-- Competitions Column -->
+          <div>
+            <div class="section-eyebrow">// DEPLOYMENTS</div>
+            <h2 id="next-heading" class="section-title col-heading-sync" style="font-size: 1.8rem;">Upcoming Competitions (2026 &amp; 2027)</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
+              We aim to participate in premier aerospace and UAV competitions, representing BMS College of Engineering and India at multiple tiers:
+            </p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-marker">01</span>
+                <div class="feature-text">
+                  <h4>NACDEC 2026</h4>
+                  <p>Organized by the Aeronautical Society of India (AeSI).</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">02</span>
+                <div class="feature-text">
+                  <h4>ISRO IROC Challenge</h4>
+                  <p>International Rover Challenge &ndash; specialized ISRO Track.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">03</span>
+                <div class="feature-text">
+                  <h4>NITK Drone Racing Competition 2026</h4>
+                  <p>National collegiate high-speed FPV racing circuit.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">04</span>
+                <div class="feature-text">
+                  <h4>SAE International Aero Design West 2027</h4>
+                  <p>Global heavy-lift collegiate flight competition in the United States.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">05</span>
+                <div class="feature-text">
+                  <h4>SAE Aerothon 2027</h4>
+                  <p>National endurance, payload drop, and UAV mission optimization.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-  <h4 class="sec">Strategic Project Status</h4>
-  <ul>
-    <li>100% of the Research, Development, and Technical Fabrication for our current flight systems is subsidized by R&amp;D department at BMS College of Engineering.</li>
-    <li>We have a flight-proven product ready for the world stage.</li>
-  </ul>
+          <!-- How Partners Enable Column -->
+          <div>
+            <div class="section-eyebrow">// VELOCITY</div>
+            <h2 class="section-title col-heading-sync" style="font-size: 1.8rem;">How Our Partners Enable This</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
+              While laboratory fabrication is internally funded, external partnerships provide the critical velocity required for international travel, electronic components, and advanced testing.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div class="tech-card bracket-box" style="padding: 1.4rem;">
+                <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.35rem;">Financial Sponsorship</h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0;">Direct funding support for student travel, international freight logistics, team accommodations, and competition entry fees.</p>
+              </div>
+              <div class="tech-card bracket-box" style="padding: 1.4rem;">
+                <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.35rem;">Academic &amp; Research Guidance</h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0;">Access to specialized defense and industrial advisors who review flight reports, telemetry algorithms, and computational simulations.</p>
+              </div>
+              <div class="tech-card bracket-box" style="padding: 1.4rem;">
+                <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.35rem;">Opportunity &amp; Exposure</h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0;">Direct talent pipelines, co-branded technology workshops, and premier visibility in national and international technical media.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <h4 class="sec">How Our Partners Enable This</h4>
-  <ul>
-    <li><b>Financial Sponsorship</b> – Support for travel, accommodation, logistics</li>
-    <li><b>Academic &amp; Research Guidance</b></li>
-    <li><b>Opportunity &amp; Exposure</b></li>
-  </ul>
+        <!-- Research & Development Initiatives (Ongoing and Upcoming) -->
+        <div>
+          <div class="section-header">
+            <div class="section-eyebrow">// 02. TECHNICAL ROADMAP</div>
+            <h2 class="section-title">Research &amp; Development Initiatives</h2>
+            <p class="section-subtitle">
+              Propel Lab–3 actively conducts applied research in avionics hardware, aerodynamics, and autonomous defense systems.
+            </p>
+          </div>
 
-  <h1 class="sec">COLLABORATION TIERS</h1>
-  <table class="tiers">
-    <tr>
-      <td>
-        <img src="images/icon-platinum.png"> <b>PLATINUM PARTNER</b><br>
-        Title Partner | Strategic Alignment<br><br>
-        &bull; Primary logo on aircraft &amp; UAV models<br>
-        &bull; Logo placement and verbal acknowledgement in official videos and key events<br>
-        &bull; Priority placement on flags, banners &amp; standees<br>
-        &bull; Featured in reports, submissions &amp; press releases<br>
-        &bull; Direct engagement with core team &amp; leads<br>
-        &bull; Association with flagship projects &amp; major events
-      </td>
-      <td>
-        <img src="images/icon-gold.png"> <b>GOLD PARTNER</b><br>
-        High Visibility | Competition Presence<br><br>
-        &bull; Secondary logo on selected aircraft models<br>
-        &bull; Logo on team uniforms &amp; presentations<br>
-        &bull; Shared branding on competition banners &amp; standees<br>
-        &bull; Recognition across events &amp; social media<br>
-        &bull; Branding during workshops &amp; technical events<br>
-        &bull; Presence at national &amp; international competitions
-      </td>
-      <td>
-        <img src="images/icon-silver.png"> <b>SILVER PARTNER</b><br>
-        Event &amp; Media Visibility<br><br>
-        &bull; Logo on team uniforms<br>
-        &bull; Logo on presentations &amp; project materials<br>
-        &bull; Inclusion on team banners &amp; shared standees<br>
-        &bull; Recognition in event communications<br>
-        &bull; Social media mentions during competitions<br>
-        &bull; Visibility at select AeroBMSCE events
-      </td>
-      <td>
-        <img src="images/icon-technical.png"> <b>TECHNICAL &amp; ECOSYSTEM PARTNER</b><br>
-        Design | Simulation | Analysis Partner<br><br>
-        &bull; Tools show cased in design &amp; competition reports<br>
-        &bull; Credit in technical presentations &amp; submissions<br>
-        &bull; Co-branded hands-on workshops<br>
-        &bull; Logo on reports, posters &amp; certificates<br>
-        &bull; Technical banners &amp; workshop standees<br>
-        &bull; Early access to high-performing students
-      </td>
-    </tr>
-  </table>
+          <div class="grid-cards-4">
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.01]</span>
+                <span class="tech-card-badge">Avionics</span>
+              </div>
+              <h3 class="tech-card-title">Indigenous Flight Controller</h3>
+              <p class="tech-card-desc">
+                End-to-end hardware and firmware design for custom multi-rotor and fixed-wing stabilization, featuring low-latency sensor loops and telemetry redundancy.
+              </p>
+            </article>
 
-  <h1 class="sec">Why Partner with Us?</h1>
-  <h2 class="sub">Partner Outcomes</h2>
-  <ul>
-    <li>Early access to industry-ready aerospace &amp; UAV talent</li>
-    <li>Association with nationally &amp; internationally ranked teams</li>
-    <li>Technical credibility through real-world flight systems &amp; deployments</li>
-    <li>High-impact brand visibility at scale (20,000+ digital and 50,000+ on-ground impressions)</li>
-    <li>Premium brand positioning within elite engineering ecosystems (SAE competitions, IIT techfests, )</li>
-  </ul>
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.02]</span>
+                <span class="tech-card-badge">Electronics</span>
+              </div>
+              <h3 class="tech-card-title">Electronic Speed Controller (ESC)</h3>
+              <p class="tech-card-desc">
+                High-efficiency propulsion electronics optimized for extreme thermal dissipation, high burst current, and regenerative braking under flight loads.
+              </p>
+            </article>
 
-  <h2 class="sub">Our Collaboration Ecosystem</h2>
-  <p><u>Design, Simulation &amp; Engineering Software</u></p>
-  <div class="logos">
-    <img src="images/solidworks.png">
-    <img src="images/ansys.png">
-    <img src="images/altair.png">
-    <img src="images/siemens.png">
-    <img src="images/flow5.png">
-    <img src="images/simscale.png">
-  </div>
-  <p><u>UAV Hardware &amp; Component Ecosytem</u></p>
-  <div class="logos">
-    <img src="images/drkstore.png">
-    <img src="images/uav-marketplace.png">
-  </div>
-  <p><u>Academic &amp; Research Interaction</u></p>
-  <div class="logos">
-    <img src="images/drdo.png">
-    <img src="images/csir-nal.png">
-  </div>
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.03]</span>
+                <span class="tech-card-badge">Robotics</span>
+              </div>
+              <h3 class="tech-card-title">GPS-Denied Navigation Systems</h3>
+              <p class="tech-card-desc">
+                Vision- and optical-flow-based autonomous positioning and SLAM navigation allowing precise trajectory tracking without satellite reception.
+              </p>
+            </article>
 
-  <div class="footer">
-    Contact us:<br>
-    Rajesh (Partnership Head)<br>
-    E-Mail: aerobmsce@bmsce.ac.in<br>
-    <img src="images/cad-plane.png" width="120" height="60">
-    <br>&copy; AeroBMSCE
-  </div>
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.04]</span>
+                <span class="tech-card-badge">Airframe</span>
+              </div>
+              <h3 class="tech-card-title">Surveillance Aircraft Platform</h3>
+              <p class="tech-card-desc">
+                Re-configurable Multi-Mission Fixed-Wing UAV equipped with convertible propulsion mechanisms and an integrated modular payload bay for reconnaissance.
+              </p>
+            </article>
 
-</div>
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.05]</span>
+                <span class="tech-card-badge restricted">Restricted</span>
+              </div>
+              <h3 class="tech-card-title">Confidential Defense Project</h3>
+              <p class="tech-card-desc">
+                In strategic collaboration with <strong>DRDO (Defence Research and Development Organisation)</strong>. Specific technical parameters and flight profiles restricted.
+              </p>
+            </article>
+
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.06]</span>
+                <span class="tech-card-badge">Aerodynamics</span>
+              </div>
+              <h3 class="tech-card-title">Morphing Wingtip Mechanisms</h3>
+              <p class="tech-card-desc">
+                Adaptive aeroelastic mechanisms designed to reduce induced drag, optimize lift distribution, and enhance overall loiter endurance.
+              </p>
+            </article>
+
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.07]</span>
+                <span class="tech-card-badge">Control</span>
+              </div>
+              <h3 class="tech-card-title">Deployable Micro-Fins Stability</h3>
+              <p class="tech-card-desc">
+                Directional stability enhancement using deployable micro-fins for active yaw control and gust alleviation in turbulent atmospheric conditions.
+              </p>
+            </article>
+
+            <article class="tech-card bracket-box">
+              <div class="tech-card-header">
+                <span class="tech-card-index">[R&amp;D.08]</span>
+                <span class="tech-card-badge">Pipeline</span>
+              </div>
+              <h3 class="tech-card-title">Partner Strategic Outcomes</h3>
+              <p class="tech-card-desc">
+                Early access to industry-ready aerospace talent, association with top-ranked teams, and high-impact brand visibility (20,000+ digital, 50,000+ on-ground impressions).
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration Tiers Section -->
+    <section id="tiers" class="section blueprint-bg blueprint-bg-top" aria-labelledby="tiers-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">// 03. SPONSORSHIP STRUCTURE</div>
+          <h2 id="tiers-heading" class="section-title">Collaboration Tiers</h2>
+          <p class="section-subtitle">
+            Tailored sponsorship packages designed to provide maximum brand exposure, talent recruitment access, and mutual aerospace innovation.
+          </p>
+        </div>
+
+        <div class="tiers-grid">
+          <!-- Platinum Partner -->
+          <article class="tier-card featured bracket-box">
+            <img src="images/icon-platinum.png" alt="Platinum Partner Emblem" class="tier-badge-icon" width="44" height="44" loading="lazy">
+            <h3 class="tier-name">Platinum Partner</h3>
+            <div class="tier-tagline">Title Partner &bull; Strategic Alignment</div>
+            <ul class="tier-perks">
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Primary logo on aircraft &amp; UAV models</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Logo placement and verbal acknowledgement in official videos and key events</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Priority placement on flags, banners &amp; standees</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Featured in reports, submissions &amp; press releases</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Direct engagement with core team &amp; leads</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Association with flagship projects &amp; major events</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-black" style="width: 100%;">Select Platinum Tier</a>
+          </article>
+
+          <!-- Gold Partner -->
+          <article class="tier-card bracket-box">
+            <img src="images/icon-gold.png" alt="Gold Partner Emblem" class="tier-badge-icon" width="44" height="44" loading="lazy">
+            <h3 class="tier-name">Gold Partner</h3>
+            <div class="tier-tagline">High Visibility &bull; Competition Presence</div>
+            <ul class="tier-perks">
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Secondary logo on selected aircraft models</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Logo on team uniforms &amp; technical presentations</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Shared branding on competition banners &amp; standees</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Recognition across events &amp; social media channels</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Branding during workshops &amp; technical symposiums</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Presence at national &amp; international competitions</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-bracket" style="width: 100%;">Select Gold Tier</a>
+          </article>
+
+          <!-- Silver Partner -->
+          <article class="tier-card bracket-box">
+            <img src="images/icon-silver.png" alt="Silver Partner Emblem" class="tier-badge-icon" width="44" height="44" loading="lazy">
+            <h3 class="tier-name">Silver Partner</h3>
+            <div class="tier-tagline">Event &bull; Media Visibility</div>
+            <ul class="tier-perks">
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Logo on team travel uniforms</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Logo on presentations &amp; project materials</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Inclusion on team banners &amp; shared standees</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Recognition in event communications</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Social media mentions during competitions</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Visibility at select AeroBMSCE institutional events</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-bracket" style="width: 100%;">Select Silver Tier</a>
+          </article>
+
+          <!-- Technical & Ecosystem Partner -->
+          <article class="tier-card bracket-box">
+            <img src="images/icon-technical.png" alt="Technical Partner Emblem" class="tier-badge-icon" width="44" height="44" loading="lazy">
+            <h3 class="tier-name">Technical Partner</h3>
+            <div class="tier-tagline">Design &bull; Simulation &bull; Analysis</div>
+            <ul class="tier-perks">
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Engineering tools showcased in design &amp; competition reports</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Direct credit in technical presentations &amp; research submissions</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Co-branded hands-on technical workshops at BMSCE</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Partner logo on reports, posters &amp; workshop certificates</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Technical banners &amp; workshop standee exposure</span>
+              </li>
+              <li class="tier-perk-item">
+                <span class="tier-check">&#10003;</span>
+                <span>Early recruitment access to high-performing engineers</span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-bracket" style="width: 100%;">Select Technical Tier</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaboration Ecosystem (Partner Logos) Section -->
+    <section class="section section-alt blueprint-bg blueprint-bg-bottom" aria-labelledby="ecosystem-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">// 04. INDUSTRY NETWORK</div>
+          <h2 id="ecosystem-heading" class="section-title">Our Collaboration Ecosystem</h2>
+          <p class="section-subtitle">
+            Leading engineering software platforms, UAV hardware providers, and premier national research bodies collaborating with AeroBMSCE.
+          </p>
+        </div>
+
+        <!-- Category 1: Design & Simulation -->
+        <div style="margin-bottom: 2rem;">
+          <h3 class="partner-category-title">// Design, Simulation &amp; Engineering Software</h3>
+          <div class="partner-logo-row">
+            <div class="partner-logo-item bracket-box">
+              <img src="images/solidworks.png" alt="SolidWorks" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/ansys.png" alt="ANSYS" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/altair.png" alt="Altair" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/siemens.png" alt="Siemens" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/flow5.png" alt="Flow5" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/simscale.png" alt="SimScale" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: UAV Hardware -->
+        <div style="margin-bottom: 2rem;">
+          <h3 class="partner-category-title">// UAV Hardware &amp; Component Ecosystem</h3>
+          <div class="partner-logo-row">
+            <div class="partner-logo-item bracket-box">
+              <img src="images/drkstore.png" alt="DRK Store" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/uav-marketplace.png" alt="UAV Marketplace" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Academic & Research Interaction -->
+        <div>
+          <h3 class="partner-category-title">// Academic &amp; Research Interaction</h3>
+          <div class="partner-logo-row">
+            <div class="partner-logo-item bracket-box">
+              <img src="images/drdo.png" alt="DRDO - Defence Research and Development Organisation" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+            <div class="partner-logo-item bracket-box">
+              <img src="images/csir-nal.png" alt="CSIR-NAL - National Aerospace Laboratories" class="partner-logo-img" width="120" height="48" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Outreach Section -->
+    <section id="contact" class="section blueprint-bg blueprint-bg-center" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-card bracket-box">
+          <div class="contact-info">
+            <div class="section-eyebrow">// DIRECT INSTITUTIONAL CONTACT</div>
+            <h2 id="contact-heading" class="section-title">Connect with Our Partnerships Team</h2>
+            <p style="color: var(--text-dark-secondary); line-height: 1.7; margin-bottom: 1.25rem; text-align: justify; text-justify: inter-word;">
+              We operate transparent institutional communication without third-party form intermediaries. For sponsorship inquiries, technical workshop proposals, or recruitment access, contact our leadership directly.
+            </p>
+
+            <ul class="contact-meta-list">
+              <li class="contact-meta-item">
+                <div class="contact-meta-icon">[L]</div>
+                <div>
+                  <strong>Rajesh</strong> &bull; Partnership Head
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <div class="contact-meta-icon">[E]</div>
+                <div>
+                  <strong>Official Email:</strong> 
+                  <a href="mailto:aerobmsce@bmsce.ac.in?subject=AeroBMSCE%20Partnership%20Inquiry" style="color: var(--text-dark-primary); font-weight: 700; text-decoration: underline;">
+                    aerobmsce@bmsce.ac.in
+                  </a>
+                </div>
+              </li>
+              <li class="contact-meta-item">
+                <div class="contact-meta-icon">[A]</div>
+                <div>
+                  <strong>Propel Lab–3</strong>, BMS College of Engineering, Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560019
+                </div>
+              </li>
+            </ul>
+
+            <div style="margin-top: 2rem;">
+              <a href="mailto:aerobmsce@bmsce.ac.in?subject=AeroBMSCE%20Partnership%20Inquiry" class="btn btn-black">
+                Send Partnership Inquiry Email &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-cad-preview">
+            <img src="images/cad-plane.png" alt="AeroBMSCE 3D CAD aircraft model" class="contact-cad-img" width="180" height="90" loading="lazy">
+            <div style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: var(--text-dark-primary); margin-bottom: 0.2rem;">PROPEL LAB–3 FLIGHT LINE</div>
+            <div style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-dark-secondary); max-width: 260px;">
+              Direct mail inquiries are reviewed within 48 hours by the partnership leads and faculty coordinators.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer (Graphite Black, Warm Ivory Typography, Technical Precision) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-link" style="margin-bottom: 0.8rem;">
+            <img src="images/header-logo.png" alt="AeroBMSCE Emblem" width="28" height="28" class="brand-emblem">
+            <span class="brand-title" style="font-size: 0.95rem; color: var(--text-dark-primary);">AERO<span class="brand-accent" style="color: var(--color-copper);">BMSCE</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            The official aerospace, aeromodelling, and unmanned systems innovation club of BMS College of Engineering. Operating out of Propel Lab–3 since 2012.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">//Home</a></li>
+            <li><a href="index.html#who" class="footer-link">//Who We Are</a></li>
+            <li><a href="journey.html" class="footer-link">//Journey</a></li>
+            <li><a href="index.html#projects" class="footer-link">//Projects</a></li>
+            <li><a href="partners.html" class="footer-link">//Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Sub-Teams</h4>
+          <ul class="footer-links">
+            <li><a href="journey.html#teams" class="footer-link">Team Yaksha</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Blue Impulse</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Flying Phantoms</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Vectors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Lab Coordinates</h4>
+          <ul class="footer-links">
+            <li>BMS College of Engineering</li>
+            <li>Bull Temple Road, Basavanagudi</li>
+            <li>Bengaluru, Karnataka 560019</li>
+            <li style="margin-top: 0.4rem;">
+              <a href="mailto:aerobmsce@bmsce.ac.in" class="footer-link" style="color: var(--text-dark-primary); font-weight: 700;">
+                aerobmsce@bmsce.ac.in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; AeroBMSCE &bull; BMS College of Engineering. All rights reserved.</div>
+        <div>Minimalist Aerospace Architecture</div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -1,66 +1,884 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<title>AeroBMSCE</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AeroBMSCE | Engineering the Next Frontier</title>
+  <meta name="description"
+    content="AeroBMSCE is the official aerospace, aeromodelling, and unmanned systems innovation club of BMS College of Engineering, operating out of Propel Lab–3.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Typography & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP & ScrollTrigger Animation Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<div class="notice">Practice website for the AeroBMSCE web development recruitment task. This is not the official AeroBMSCE website.</div>
+  <!-- Subtle Engineering Grid Background -->
+  <div class="bg-grid-guides" aria-hidden="true"></div>
 
-<div class="top">
-  <div class="wrap">
-    <img src="images/header-logo.png">
-    <div class="nav">
-      <a href="#">Home</a>
-      <a href="#who">Who We Are</a>
-      <a href="journey.html">Journey</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Contact</a>
+
+
+  <main class="aerospace-page">
+    <!-- Hero Section (Ported from Lovable Reference) -->
+    <section class="aero-hero" aria-label="AeroBMSCE hero">
+      <img class="aero-background" src="images/aerospace-background.jpg"
+        alt="Colorful point-cloud fighter aircraft above aerospace engineering schematics">
+      <div class="aero-guides" aria-hidden="true"><span></span><span></span><span></span></div>
+      <header class="aero-header">
+        <a href="index.html" class="aero-nav-button aero-logo" aria-label="AeroBMSCE home">
+          <img src="images/logo.png" alt="AeroBMSCE Logo" class="aero-logo-img">
+        </a>
+        <nav class="aero-navigation" aria-label="Main navigation">
+          <a href="index.html" class="aero-nav-button"><span class="nav-slashes">//</span>Home</a>
+          <a href="#who" class="aero-nav-button"><span class="nav-slashes">//</span>Who We Are</a>
+          <a href="journey.html" class="aero-nav-button"><span class="nav-slashes">//</span>Journey</a>
+          <a href="#projects" class="aero-nav-button"><span class="nav-slashes">//</span>Projects</a>
+          <a href="partners.html" class="aero-nav-button"><span class="nav-slashes">//</span>Partners</a>
+        </nav>
+        <div class="aero-header-actions">
+          <div class="aero-language">
+            <button type="button" class="aero-nav-button" id="lang-btn" aria-label="Select language"
+              aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true" width="12" height="12">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+              <span>EN</span>
+            </button>
+            <div class="language-options" id="lang-options" style="display: none;">
+              <button type="button" class="aero-nav-button" id="lang-en-btn">English &#10003;</button>
+            </div>
+          </div>
+          <a href="partners.html#contact" class="aero-button aero-button-solid contact-button">Contact us</a>
+          <button type="button" class="aero-nav-button aero-menu" id="menu-btn" aria-label="Open navigation"
+            aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true" width="20" height="20">
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <nav class="aero-mobile-navigation" id="mobile-nav" style="display: none;" aria-label="Mobile navigation">
+          <a href="index.html" class="aero-nav-button">//Home</a>
+          <a href="#who" class="aero-nav-button">//Who We Are</a>
+          <a href="journey.html" class="aero-nav-button">//Journey</a>
+          <a href="#projects" class="aero-nav-button">//Projects</a>
+          <a href="partners.html" class="aero-nav-button">//Partners</a>
+        </nav>
+      </header>
+
+      <div class="aero-copy">
+        <h1>AEROBMSCE</h1>
+        <p class="aero-description">
+          • Above Gravity • &nbsp; &nbsp; • Beyond Limits •<br><br>
+          ONE OF INDIA’S LONGEST-RUNNING COMPETITIVE AEROSPACE &amp; UAV TEAM WITH INTERNATIONAL FLIGHT HISTORY
+        </p>
+        <div class="aero-cta-row">
+          <a href="#projects" class="aero-button aero-button-outline">Our Builds</a>
+          <a href="#who" class="aero-button aero-button-solid">Explore</a>
+        </div>
+      </div>
+
+      <div class="aircraft-annotations" aria-hidden="true">
+        <div class="aircraft-label label-radar">Active AESA<br>Radar System</div>
+        <div class="aircraft-label label-radius">1,800 NM<br>Combat Radius</div>
+        <div class="aircraft-label label-ceiling">65,000 FT<br>Operational Ceiling</div>
+        <div class="aircraft-label label-speed">MACH 2.6<br>Maximum Velocity</div>
+      </div>
+
+      <div class="aero-statistics">
+        <div class="aero-stat">
+          <strong>14+</strong>
+          <span>Years of<br>Legacy</span>
+        </div>
+        <div class="aero-stat">
+          <strong>75+</strong>
+          <span>Projects<br>Completed</span>
+        </div>
+        <div class="aero-stat">
+          <strong>20+</strong>
+          <span>Podium Finishes<br>Globally</span>
+        </div>
+        <div class="aero-stat">
+          <strong>50+</strong>
+          <span>Research Papers<br>&amp; Reports</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="who" class="section section-alt blueprint-bg blueprint-bg-top" aria-labelledby="who-heading">
+      <div class="container">
+        <div class="two-col-grid">
+          <div class="editorial-img-box bracket-box who-img-stage">
+            <img src="images/photo2.jpg" alt="AeroBMSCE student engineers preparing aircraft for competition"
+              class="who-popout-img" id="who-popout-img" width="600" height="380" loading="lazy">
+          </div>
+
+          <div class="feature-content">
+            <div class="section-eyebrow">// 01. INSTITUTIONAL FOUNDATION</div>
+            <div class="heading-reveal-wrap">
+              <h2 id="who-heading" class="section-title heading-reveal-target">Who We Are</h2>
+            </div>
+            <p>
+              AeroBMSCE is the official aerospace, aeromodelling, and unmanned systems innovation club of BMS College of
+              Engineering, operating directly from Propel Lab–3. Established in 2012, the club brings together engineers
+              from over 10 academic departments to design, build, and test advanced aircraft, drones, and autonomous
+              systems.
+            </p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <span class="feature-marker">01</span>
+                <div class="feature-text">
+                  <h4>Competitive Aircraft &amp; UAV Design</h4>
+                  <p>Aerodynamic analysis, carbon-composite layups, and micro-class precision payload systems built to
+                    international competition standards.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">02</span>
+                <div class="feature-text">
+                  <h4>Drone Racing &amp; Autonomy</h4>
+                  <p>High-agility FPV racing platforms and autonomous fixed-wing surveillance platforms tested under
+                    rigorous mission constraints.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-marker">03</span>
+                <div class="feature-text">
+                  <h4>Industry-Grade Fabrication &amp; Testing</h4>
+                  <p>Hands-on validation in telemetry simulation, dynamic thrust testing, and structural finite element
+                    analysis.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why It Matters & Vision Section -->
+    <section class="section blueprint-bg blueprint-bg-bottom" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">// 02. CORE PHILOSOPHY</div>
+          <div class="heading-reveal-wrap">
+            <h2 id="why-heading" class="section-title heading-reveal-target">Why It Matters &bull; Our Vision</h2>
+          </div>
+          <p class="section-subtitle">
+            Bridging theoretical classroom engineering with mission-critical flight constraints and global competition
+            standards.
+          </p>
+        </div>
+
+        <div class="grid-cards-4">
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[SYS.01]</span>
+              <span class="tech-card-badge">Engineering</span>
+            </div>
+            <h3 class="tech-card-title">Real Constraints</h3>
+            <div class="tech-card-scope">Applied Flight Loads</div>
+            <p class="tech-card-desc">
+              Engineers are trained to overcome authentic multidisciplinary constraints—structural payload limits,
+              thermal dissipation, RF noise, and strict power-to-weight ratios.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[SYS.02]</span>
+              <span class="tech-card-badge">Talent</span>
+            </div>
+            <h3 class="tech-card-title">Pre-Graduation Exposure</h3>
+            <div class="tech-card-scope">Workforce Readiness</div>
+            <p class="tech-card-desc">
+              Club alumni enter the aerospace, defense, and robotics workforce with logged hours in composite
+              manufacturing, embedded firmware, and flight dynamics.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[SYS.03]</span>
+              <span class="tech-card-badge">Arena</span>
+            </div>
+            <h3 class="tech-card-title">Global Visibility</h3>
+            <div class="tech-card-scope">Elite Ecosystems</div>
+            <p class="tech-card-desc">
+              We represent BMS College of Engineering and India at premier world stages like SAE International Aero
+              Design in the USA, demonstrating Indian aerospace talent globally.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[SYS.04]</span>
+              <span class="tech-card-badge">Vision</span>
+            </div>
+            <h3 class="tech-card-title">The AeroBMSCE Vision</h3>
+            <div class="tech-card-scope">Enduring Legacy</div>
+            <p class="tech-card-desc">
+              To cultivate future leaders in the aerospace and unmanned systems industry, establishing an enduring
+              legacy of engineering excellence that inspires collegiate teams worldwide.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Build / Active R&D Section -->
+    <section id="projects" class="section section-alt blueprint-bg blueprint-bg-top" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">// 03. ACTIVE R&amp;D &amp; AIRFRAME INITIATIVES</div>
+          <div class="heading-reveal-wrap">
+            <h2 id="projects-heading" class="section-title heading-reveal-target">What We Build</h2>
+          </div>
+          <p class="section-subtitle">
+            Previewing indigenous hardware, autonomy suites, and defense research initiatives by AeroBMSCE.
+          </p>
+        </div>
+
+        <div class="grid-cards-4">
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[DEV.01]</span>
+              <span class="tech-card-badge">Avionics</span>
+            </div>
+            <h3 class="tech-card-title">Indigenous Flight Controller &amp; ESCs</h3>
+            <div class="tech-card-scope">Hardware &amp; Firmware</div>
+            <p class="tech-card-desc">
+              End-to-end hardware and firmware design for custom flight control systems and high-efficiency Electronic
+              Speed Controllers (ESCs) tailored for extreme flight profiles.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[DEV.02]</span>
+              <span class="tech-card-badge">Autonomy</span>
+            </div>
+            <h3 class="tech-card-title">GPS-Denied Navigation Systems</h3>
+            <div class="tech-card-scope">Robotic Vision &amp; SLAM</div>
+            <p class="tech-card-desc">
+              Computer-vision and multi-sensor fusion algorithms allowing autonomous UAV positioning, obstacle
+              avoidance, and mission execution in contested environments.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[DEV.03]</span>
+              <span class="tech-card-badge">Airframe</span>
+            </div>
+            <h3 class="tech-card-title">Multi-Mission Surveillance UAV</h3>
+            <div class="tech-card-scope">Convertible Propulsion</div>
+            <p class="tech-card-desc">
+              Re-configurable fixed-wing platform featuring convertible propulsion systems and an integrated modular
+              payload bay for aerial mapping and reconnaissance.
+            </p>
+          </article>
+
+          <article class="tech-card bracket-box">
+            <div class="tech-card-header">
+              <span class="tech-card-index">[DEV.04]</span>
+              <span class="tech-card-badge restricted">Restricted</span>
+            </div>
+            <h3 class="tech-card-title">Confidential Defense Project</h3>
+            <div class="tech-card-scope">DRDO Collaboration</div>
+            <p class="tech-card-desc">
+              Specialized aerodynamic and propulsion research in strategic collaboration with the Defence Research and
+              Development Organisation (DRDO). Specific technical details restricted.
+            </p>
+          </article>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="partners.html" class="btn btn-bracket">Review Full Technical Roadmap &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Championship Milestones Timeline Section -->
+    <section id="achievements" class="section section-milestones" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-eyebrow">// 04. COMPETITIVE FLIGHT RECORD</div>
+          <div class="heading-reveal-wrap">
+            <h2 id="achievements-heading" class="section-title heading-reveal-target">Championship Milestones</h2>
+          </div>
+          <p class="section-subtitle">
+            A verified chronological record of national and international podium finishes, simulation awards, and
+            championship titles.
+          </p>
+        </div>
+
+        <!-- Vertical Scroll-Driven Timeline -->
+        <div class="milestones-timeline-wrap">
+          <div class="milestones-rail" aria-hidden="true">
+            <div class="milestones-track-bg"></div>
+            <div class="milestones-track-active"></div>
+          </div>
+
+          <div class="milestones-stream">
+            <!-- Season 2026 -->
+            <div class="milestone-season-group" data-season="2026">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2026</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- SAE West 2026 -->
+              <article class="milestone-item is-highlighted">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">INTERNATIONAL // MICRO CLASS</span>
+                    <span class="milestone-loc">Fort Worth, Texas, USA</span>
+                  </div>
+                  <h3 class="milestone-title">SAE International Aero Design West</h3>
+                  <div class="milestone-award is-copper">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34M7 4h10v6a5 5 0 0 1-10 0V4z" />
+                    </svg>
+                    <span>2nd Place Internationally &bull; MATLAB Simulation Awards</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Ranked overall #16 Globally in the Micro Class Category against premier international engineering
+                    universities, recognized for high-fidelity MATLAB simulation workflows.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE Aerothon ADDC 2026 -->
+              <article class="milestone-item is-highlighted">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">NATIONAL // INNOVATION</span>
+                    <span class="milestone-loc">ADDC 2026</span>
+                  </div>
+                  <h3 class="milestone-title">SAE Aerothon &bull; ADDC</h3>
+                  <div class="milestone-award is-copper">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>1st Place &bull; Unique Technology Development</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Honored for novel aerodynamic mechanisms and deployable flight surfaces, validating our indigenous
+                    carbon-composite mechanism enhancements.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Season 2025 -->
+            <div class="milestone-season-group" data-season="2025">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2025</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- SAE Aerothon Nov 2025 -->
+              <article class="milestone-item is-highlighted">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">NATIONAL // ENDURANCE &amp; MISSION</span>
+                    <span class="milestone-loc">November 2025</span>
+                  </div>
+                  <h3 class="milestone-title">SAE Aerothon</h3>
+                  <div class="milestone-award is-copper">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>2nd Place Overall &bull; ₹1,25,000 Cash Prize</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Demonstrated high endurance flight and reliable payload delivery in competitive conditions, securing
+                    a major national podium award.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE-Drone Design Challenge May 2025 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">TECHNICAL EVALUATION</span>
+                    <span class="milestone-loc">May 2025</span>
+                  </div>
+                  <h3 class="milestone-title">SAE-Drone Design Challenge</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34M7 4h10v6a5 5 0 0 1-10 0V4z" />
+                    </svg>
+                    <span>1st Place &bull; Best Technical Presentation (₹10,000 Cash Prize)</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Awarded for exceptional design validation, computational analysis, and defense-grade engineering
+                    documentation.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE Autonomous Drone Challenge April 2025 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">AUTONOMOUS SYSTEMS</span>
+                    <span class="milestone-loc">April 2025</span>
+                  </div>
+                  <h3 class="milestone-title">SAE Autonomous Drone Design Challenge</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>1st Place &bull; Best Innovation (₹5,000 Cash Prize)</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Recognized for novel autonomous algorithm integration, obstacle avoidance heuristics, and failsafe
+                    response architecture.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Season 2024 -->
+            <div class="milestone-season-group" data-season="2024">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2024</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- GAT Nov 2024 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">FPV RACING // TEAM VECTORS</span>
+                    <span class="milestone-loc">November 2024</span>
+                  </div>
+                  <h3 class="milestone-title">Global Academy of Technology</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>1st Place Champion</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Team Vectors piloted custom-tuned lightweight racing quads through high-speed indoor gates to clinch
+                    1st place.
+                  </p>
+                </div>
+              </article>
+
+              <!-- NITK Oct 2024 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">NATIONAL RACING ARENA</span>
+                    <span class="milestone-loc">October 18–20, 2024</span>
+                  </div>
+                  <h3 class="milestone-title">NITK Drone Racing Competition</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>2nd Place Podium</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Secured runner-up standing against premier collegiate drone racing contenders across India.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE West Aug 2024 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">INTERNATIONAL ARENA</span>
+                    <span class="milestone-loc">August 2024</span>
+                  </div>
+                  <h3 class="milestone-title">SAE International Aero Design West</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+                    </svg>
+                    <span>12th Place Globally</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Maintained top-tier performance on international soil in flight payload accuracy, team flight
+                    rounds, and mission scores.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Season 2022 -->
+            <div class="milestone-season-group" data-season="2022">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2022</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- SAE Aerothon 2022 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">NATIONAL AEROMODELLING</span>
+                    <span class="milestone-loc">National Arena</span>
+                  </div>
+                  <h3 class="milestone-title">SAE Aerothon</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>3rd Place &bull; ₹50,000 Cash Prize</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Evaluated on fixed-wing aeromodelling mission targets, structure weight optimization, and payload
+                    efficiency.
+                  </p>
+                </div>
+              </article>
+
+              <!-- KIT South India Exhibition -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">REGIONAL EXHIBITION</span>
+                    <span class="milestone-loc">Tiptur, Karnataka</span>
+                  </div>
+                  <h3 class="milestone-title">III South India Exhibition</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>2nd Place &bull; ₹15,000 Cash Prize</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Showcased unmanned reconnaissance hardware and remote sensor telemetry integration at Kalpataru
+                    Institute of Technology.
+                  </p>
+                </div>
+              </article>
+
+              <!-- AI-VTOL IIT Bombay -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">TECHFEST // IIT BOMBAY</span>
+                    <span class="milestone-loc">Mumbai, India</span>
+                  </div>
+                  <h3 class="milestone-title">AI-VTOL Autonomous Challenge</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    <span>4th Place Nationally</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Rigorous autonomous vertical takeoff and wing-borne transition challenge at India’s premier
+                    technical festival.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE West 2022 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">GLOBAL DESIGN REPORT</span>
+                    <span class="milestone-loc">USA</span>
+                  </div>
+                  <h3 class="milestone-title">SAE International Aero Design West</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+                    </svg>
+                    <span>9th Place in Design Report &bull; 11th Place in Technical Presentation Globally</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Global technical documentation and presentation standings among elite collegiate aeronautical
+                    departments worldwide.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Season 2020 -->
+            <div class="milestone-season-group" data-season="2020">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2020</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- SAE India 2020 -->
+              <article class="milestone-item is-highlighted">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">TEAM BLUE IMPULSE // NATIONAL</span>
+                    <span class="milestone-loc">India</span>
+                  </div>
+                  <h3 class="milestone-title">SAE-India National Championship</h3>
+                  <div class="milestone-award is-copper">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34M7 4h10v6a5 5 0 0 1-10 0V4z" />
+                    </svg>
+                    <span>1st Place Overall Nationally &bull; ₹1,00,000 Cash Prize</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Team Blue Impulse claimed top national honors across flight rounds, payload lift ratios, and
+                    technical submissions.
+                  </p>
+                </div>
+              </article>
+
+              <!-- SAE West 2020 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">GLOBAL STANDINGS</span>
+                    <span class="milestone-loc">USA</span>
+                  </div>
+                  <h3 class="milestone-title">SAE Aero Design West</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+                    </svg>
+                    <span>8th Place in Design Standings Globally</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Global top-10 design report rating honoring structural calculations and aerodynamic optimization.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Season 2018 -->
+            <div class="milestone-season-group" data-season="2018">
+              <div class="milestone-season-header">
+                <span class="milestone-season-badge">SEASON 2018</span>
+                <span class="milestone-season-line"></span>
+              </div>
+
+              <!-- SAE India 2018 -->
+              <article class="milestone-item">
+                <div class="milestone-marker-wrap" aria-hidden="true">
+                  <span class="milestone-marker"></span>
+                </div>
+                <div class="milestone-body">
+                  <div class="milestone-meta">
+                    <span class="milestone-tag">ANNA UNIVERSITY // CHENNAI</span>
+                    <span class="milestone-loc">Chennai, India</span>
+                  </div>
+                  <h3 class="milestone-title">SAE INDIA Aero Design</h3>
+                  <div class="milestone-award">
+                    <svg class="award-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none"
+                      stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                    <span>3rd Place Overall &bull; 2nd Place in Design Report</span>
+                  </div>
+                  <p class="milestone-desc">
+                    Early milestone cementing AeroBMSCE’s national standing in competitive design report evaluation and
+                    flight operations.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center;">
+          <a href="journey.html#teams" class="btn btn-black">Explore The Four Sub-Teams &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner CTA Section -->
+    <section id="partners" class="section section-alt blueprint-bg blueprint-bg-center" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="contact-card bracket-box">
+          <div class="contact-info">
+            <div class="section-eyebrow">// STRATEGIC ALLIANCE</div>
+            <div class="heading-reveal-wrap">
+              <h2 id="cta-heading" class="section-title heading-reveal-target">Support India’s Collegiate Flight
+                Champions</h2>
+            </div>
+            <p style="color: var(--text-dark-secondary); line-height: 1.7; margin-bottom: 1.5rem; text-align: justify; text-justify: inter-word;">
+              With 100% of our baseline research and lab fabrication supported by BMS College of Engineering, corporate
+              and technical sponsorships provide direct velocity for travel, advanced avionics, and international
+              competition deployment.
+            </p>
+            <div class="hero-actions" style="margin-bottom: 0;">
+              <a href="partners.html" class="btn btn-black">Review Partnership Tiers &rarr;</a>
+              <a href="mailto:aerobmsce@bmsce.ac.in?subject=AeroBMSCE%20Partnership%20Inquiry"
+                class="btn btn-bracket">Direct Email: aerobmsce@bmsce.ac.in</a>
+            </div>
+          </div>
+          <div class="contact-cad-preview">
+            <img src="images/cad-plane.png" alt="AeroBMSCE 3D CAD aircraft model" class="contact-cad-img" width="180"
+              height="90" loading="lazy">
+            <div
+              style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: var(--text-dark-primary); margin-bottom: 0.2rem;">
+              PROPEL LAB–3 FLIGHT LINE</div>
+            <div style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-dark-secondary);">100%
+              R&amp;D
+              Subsidized by BMSCE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer (Graphite Black, Warm Ivory Typography, Technical Precision) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-link" style="margin-bottom: 0.8rem;">
+            <img src="images/header-logo.png" alt="AeroBMSCE Emblem" width="28" height="28" class="brand-emblem">
+            <span class="brand-title" style="font-size: 0.95rem; color: var(--text-dark-primary);">AERO<span
+                class="brand-accent" style="color: var(--color-copper);">BMSCE</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            The official aerospace, aeromodelling, and unmanned systems innovation club of BMS College of Engineering.
+            Operating out of Propel Lab–3 since 2012.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">//Home</a></li>
+            <li><a href="#who" class="footer-link">//Who We Are</a></li>
+            <li><a href="journey.html" class="footer-link">//Journey</a></li>
+            <li><a href="#projects" class="footer-link">//Projects</a></li>
+            <li><a href="partners.html" class="footer-link">//Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Sub-Teams</h4>
+          <ul class="footer-links">
+            <li><a href="journey.html#teams" class="footer-link">Team Yaksha</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Blue Impulse</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Flying Phantoms</a></li>
+            <li><a href="journey.html#teams" class="footer-link">Team Vectors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">// Lab Coordinates</h4>
+          <ul class="footer-links">
+            <li>BMS College of Engineering</li>
+            <li>Bull Temple Road, Basavanagudi</li>
+            <li>Bengaluru, Karnataka 560019</li>
+            <li style="margin-top: 0.4rem;">
+              <a href="mailto:aerobmsce@bmsce.ac.in" class="footer-link"
+                style="color: var(--text-dark-primary); font-weight: 700;">
+                aerobmsce@bmsce.ac.in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; AeroBMSCE &bull; BMS College of Engineering. All rights reserved.</div>
+        <div>Minimalist Aerospace Architecture</div>
+      </div>
     </div>
-    <div class="clear"></div>
-  </div>
-</div>
-
-<div class="hero">
-  <div class="box">
-    <h1>AeroBMSCE</h1>
-    <p class="tag">&bull; Above Gravity &bull; &nbsp;&nbsp;&nbsp; &bull; Beyond Limits &bull;</p>
-    <p>ONE OF INDIA’S LONGEST-RUNNING COMPETITIVE AEROSPACE &amp; UAV TEAM WITH INTERNATIONAL FLIGHT HISTORY</p>
-  </div>
-</div>
-
-<img class="banner" src="images/photo8.jpg">
-
-<div class="wrap">
-
-  <a name="who"></a>
-  <h4 class="sec">WHO WE ARE</h4>
-  <p>AeroBMSCE is the official aerospace, aeromodelling, and unmanned systems innovation club of BMS College of Engineering, operating from Propel Lab–3. Established in 2012, the club brings together engineers from 10+ departments to design, build, and test advanced aircraft, drones, and autonomous systems.</p>
-
-  <h4 class="sec">WHAT WE DO</h4>
-  <ul>
-    <li>Competitive aircraft &amp; UAV design</li>
-    <li>Drone racing &amp; autonomy</li>
-    <li>Industry-grade fabrication &amp; testing</li>
-    <li>Talent development through real-world engineering</li>
-  </ul>
-
-  <h4 class="sec">WHY IT MATTERS</h4>
-  <ul>
-    <li>Engineers trained on real constraints</li>
-    <li>Talent exposure before graduation</li>
-    <li>Brand visibility in elite technical ecosystems</li>
-  </ul>
-
-  <h4 class="sec">OUR VISION</h4>
-  <p>We envision AeroBMSCE as a leading aerospace and unmanned systems research group, renowned for design excellence, innovation, and competitive success. We aim to cultivate future leaders in the aerospace and drone industry, establishing a legacy of engineering excellence that inspires students worldwide.</p>
-
-  <p style="margin-top:30px">Want to know more about what we have achieved? <a href="journey.html">Click here</a>. Interested in working with us? <a href="partners.html">Click here</a>.</p>
-
-</div>
+  </footer>
 
 </body>
+
 </html>
