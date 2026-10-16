@@ -4,7 +4,9 @@ Official recruitment task redesign for **AeroBMSCE**, the collegiate aerospace, 
 
 Built with zero-dependency **Vanilla HTML5, CSS3, and JavaScript**, delivering a high-performance, accessible, editorial aerospace engineering experience compatible with GitHub Pages.
 
-Reference Broken Website: [https://rajeshbharadwaj44.github.io/AeroBMSCE_TASK_REPO/](https://rajeshbharadwaj44.github.io/AeroBMSCE_TASK_REPO/)
+- **Live Website:** [https://yuna-vl.github.io/AeroBMSCE_TASK_REPO/](https://yuna-vl.github.io/AeroBMSCE_TASK_REPO/)
+- **GitHub Repository:** [https://github.com/yuna-vl/AeroBMSCE_TASK_REPO](https://github.com/yuna-vl/AeroBMSCE_TASK_REPO)
+- **Reference Broken Website:** [https://rajeshbharadwaj44.github.io/AeroBMSCE_TASK_REPO/](https://rajeshbharadwaj44.github.io/AeroBMSCE_TASK_REPO/)
 
 ---
 
@@ -173,7 +175,7 @@ The website is engineered with 100% relative paths and requires no build or comp
    ```
 
 2. **Enable GitHub Pages in Repository Settings:**
-   - Open your repository on GitHub (`https://github.com/<your-username>/AeroBMSCE_TASK_REPO`).
+   - Open your repository on GitHub ([https://github.com/yuna-vl/AeroBMSCE_TASK_REPO](https://github.com/yuna-vl/AeroBMSCE_TASK_REPO)).
    - Navigate to **Settings** &gt; **Pages** (under the "Code and automation" section).
    - Under **Build and deployment**:
      - **Source**: Select `Deploy from a branch`.
@@ -182,8 +184,8 @@ The website is engineered with 100% relative paths and requires no build or comp
 
 3. **Verify Deployment:**
    - GitHub Actions will trigger the `pages-build-deployment` workflow automatically.
-   - After 1–2 minutes, your live site URL will be displayed:
-     `https://<your-username>.github.io/AeroBMSCE_TASK_REPO/`
+   - The live site is published and accessible at:
+     **[https://yuna-vl.github.io/AeroBMSCE_TASK_REPO/](https://yuna-vl.github.io/AeroBMSCE_TASK_REPO/)**
 
 ---
 
